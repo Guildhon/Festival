@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>易过节 | 商家活动</title>
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/prettyPhoto.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+#inner-page{
+	margin-top: 40px;
+}
+.breadcrumb {margin-bottom: 40px;border: 1px solid #ddd;}
+.breadcrumb i {font-size: 15px;}
+.breadcrumb > li {text-shadow: 0 1px 0 #FFF;padding: 0 20px;position: relative;white-space: nowrap;}
+.breadcrumb > li + li:before {content: '';padding: 0;}
+.breadcrumb > li:after {content: '';display: block;position: absolute;top: -3px;right: -5px;width: 31px;height: 31px;border-right: 1px solid #DDD;border-bottom: 1px solid #DDD;-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg);-o-transform: rotate(-45deg);transform: rotate(-45deg);}
+
+/* ---Product--- */
+.products {text-align: center;}
+.products:after, .products:before{clear: both; content: '\0020'; display: block; visibility: hidden; width: 0; height: 0;}
+.products .product{margin-bottom: 50px;}
+
+.product {}
+.product:after, .product:before{clear: both; content: '\0020'; display: block; visibility: hidden; width: 0; height: 0;}
+.product .image-more {margin-top: 15px;}
+.product .image-more img{border: 1px solid #DDD;max-height: 85px;margin-bottom: 10px;}
+.product .buttons {margin: 10px 0;}
+.product .buttons a {background-color: #eee;}
+.product .name {border-bottom: 1px solid #eee;color:red;}
+.name a{
+	color:red;
+}
+.product .name h3{font-weight: 500;font-size: 20px;color: #666;margin-top: 10px;}
+.product .info ul li{margin: 10px 0;}
+.product .price {font-size: 22px;margin: 10px 0;}
+.product .price span{color: #aaa;margin-left: 10px;text-decoration: line-through;} 
+.product .rating{margin: 10px 0;}
+.product .rating span {margin-right: 5px;}
+.product .options {margin: 10px 0;}
+.product .options select{border: 1px solid #eee; width: 100%;}
+.product input.form-inline {border-radius: 4px;border: 1px solid #ccc;padding: 4px 6px;width: 40px;}
+.product .share .share-btn {margin-right: 25px;padding-top: 20px;}
+@media(max-width:767px) {.product{border: none;}}
+
+.product-desc{margin: 50px 0;}
+
+.pricedetails {margin-top: 20px;}
+.pricedetails table td {padding-right: 70px;}
+
+
+.modal-body {padding:5px !important;}
+.modal-content {border-radius:0;}.modal-dialog img {text-align:center;margin:0 auto;}
+.controls{width:50px;display:block;font-size:19px;font-weight:500;}
+.next {float:right;text-align:right;}
+/*override modal for demo only*/
+.modal-dialog {max-width:500px;padding-top: 90px;}
+@media screen and (min-width: 768px){
+	.modal-dialog {width:500px;padding-top: 90px}          
+}
+
+/* ---------------------------------------------------------------------------- */
+/* -----------------------------------Sidebar---------------------------------- */
+/* ---------------------------------------------------------------------------- */
+#sidebar{}
+
+.widget {margin-bottom: 30px;border: 1px solid #aaa;padding-bottom: 4px;}
+.widget .heading {background-color: #3F3F3F;padding: 10px 20px;margin: 0;}
+.widget .heading h4{margin: 0;color: #fff;font-size: 21px;}
+.widget .content {padding: 15px 20px;}
+
+.widget.wid-categories {}
+.widget.wid-categories ul li{margin-bottom: 10px;border-bottom: 1px dashed #aaa;padding-bottom: 7px;}
+.widget.wid-categories ul li a{font-size: 17px;}
+
+.widget.wid-product h5{font-size: 19px;font-weight: 500;margin-top: 0;padding-top: 20px;}
+.widget.wid-product img{float: left; margin: 10px; max-height: 110px;border-radius:50%;}
+.widget.wid-product .wrapper {vertical-align: middle;text-align: left;padding-bottom: 7px;}
+
+.widget.wid-discouts {}
+.widget.wid-discouts .checkbox, .widget.wid-brand .checkbox{font-weight: 500;}
+
+.widget.wid-type {}
+.widget.wid-type select{width: 100%; border: 1px solid #aaa;margin-top: 20px;padding: 3px;}
+
+/* ---------------------------------------------------------------------------- */
+/* -----------------------------------Footer---------------------------------- */
+/* ---------------------------------------------------------------------------- */
+footer {background: #2A2A2A;}
+
+footer .wrap-footer {padding: 50px 0;}
+
+footer .col-footer {border-right: 1px solid #666;padding: 0 30px;}
+footer .col-footer:last-child {border: none;}
+footer .col-footer .heading {margin: 0 0 20px;}
+footer .col-footer .heading h4{color: #fff;font-size: 23px;font-weight: 500;margin: 0 0 20px;}
+footer .col-footer a {color: #666;}
+footer .col-footer ul {padding-left: 25px;}
+footer .col-footer ul li{list-style: circle;}
+
+footer .footer-1 img{margin-bottom: 10px;}
+footer .footer-2 {}
+footer .footer-3 {}
+footer .footer-4 ul{padding-left: 0px;}
+footer .footer-4 ul li{margin-top: 10px; list-style: none;}
+footer .footer-4 span{margin-right:10px;}
+
+footer .copyright {background: #393939;padding: 20px 0;}
+footer .copyright a {color: #fff;}
+footer .copyright a:hover {text-decoration: underline;}
+footer .copyright ul li {display: inline-block;margin-left: 10px;}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{background: #272727;border-radius: 0;color: #fff;}
+.nav-tabs > li > a:hover, .nav-tabs > li > a:focus {background: #272727;border-radius: 0;color: #fff;}
+.tab-content {border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;border-left: 1px solid #ccc;padding: 25px;}
+a:hover{
+	color:red;
+}
+</style>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style>
+
+</style>
+<body>
+<header id="header">
+  <nav class="navbar navbar-inverse" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand" href="index.html"><i class="fa fa-sun-o"></i>易过节</a></div>
+      <div class="collapse navbar-collapse navbar-right">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">主页</a></li>
+          <li><a href="organizatActivity.html">组织活动</a></li>
+          <li><a href="shopping.html">商品购买</a></li>
+          <li><a href="businessesActivity.html">商家活动</a></li>
+          <li><a href="festivalNews.html">节日新闻</a></li>
+          <li><a href="festivalCircle.html">过节圈</a></li>
+          <li><a href="login.html">登录</a>|<a href="register.html">注册</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<div id="inner-page">
+  <div class="container">
+	<div class="row">
+		<div id="main-content" class="col-md-8">
+			<div class="product">
+				<div class="col-md-6">
+					<div class="image">
+						<img src="images/activity/a.jpg" />
+						
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="caption">
+						<div class="name"><h3 class="h3" style="color:red">十一狂欢，豪礼派送，全天不停!</h3></div>
+						<div class="info">
+							<ul>
+								<li>活动举办方: 亚洲国际有限商场</li>
+								<li>宣传语：十一狂欢，豪礼派送，全天不停!</li>
+								<li>活动时间：10月1日—7日 </li>
+								<li>活动地点：大悦城百货购物中心 </li>
+								<li>活动形式：围绕革命历史题材，开展主题展览活动。</li>
+							</ul>
+						</div>
+						
+						<div class="options">
+							活动预期目标： 
+							<select>
+								<option value="red"> 目标一：拉伸品牌形象，强化品牌正能量。</option>
+								<option value="black">目标二：强调与消费者的情感沟通。</option>
+							</select>
+						</div>
+						<div class="rating">活动推荐程度：<span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span>
+						</div>
+						<div class="clearfix" style="margin-bottom: 10px;">如果你感兴趣，可以选择: <button class="btn btn-success pull-right">点击参加</button></div>
+						<div class="share well clearfix">
+							<strong style="margin-right: 13px;">邀请我的好友 :</strong>
+							<select name="" id="" class="form-control">
+								<option value="">小明</option>
+								<option value="">小黄</option>
+								<option value="">小话</option>
+							</select>
+							<button class="btn btn-primary pull-right" style="margin-top:10px">点击邀请</button>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>	
+			<div class="product-desc">
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#description">活动描述</a></li>
+					<li><a href="#review">活动参考图片</a></li>
+				</ul>
+				<div class="tab-content">
+					<div id="description" class="tab-pane fade in active">
+						<h4 style="font-size: 28px;font-weight: 600;margin:10px auto 10px;">商场布局规划</h4>
+						<p>①中庭布置方案：确定以“红色文化”为主题的大型展览，还原开国大典场景，设立长15m,宽6m的天安门城楼模型，摆放伟人蜡像，使人们再次回到全民欢庆的1949年。 </p>
+						<p>②商场DP点布置方案：商场主客流线交叉口、通道入口、扶梯口、楼梯口等增设50组互动式的创意艺术雕塑，使消费者观赏、驻足、拍照，进一步强化整个商场的艺术氛围。 </p>
+						<p>③商场室外景观布置方案：在商场室外的正门，摆设三组高6米的大型武器模型，分别是：第一颗人造地球卫星“东方红一号”的模型及中国第一艘载人航天宇宙飞船“神州一号”的模型。</p>
+						<h4 style="font-size: 28px;font-weight: 600;margin:20px auto 10px;">活动宣传配合</h4>
+						<p> 1.活动前期宣传 
+    ①宣传时间：2013年9月5日 
+    ②宣传形式：报纸媒体、DM为主 
+    ③宣传内容： 版面安排1/2版，以革命历史文化主题展览设计效果图为主，配合商场logo及开业庆典具体事宜说明。 </p>
+    					<p>
+    						2.活动后期宣传 
+    ①宣传时间：2013年9月11—20日 
+    ②宣传形式：软文宣传 
+    					</p>
+					</div>
+					<div id="review" class="tab-pane fade">
+					  <div>
+					  </div>
+					  <div class="pic-list clearfix">
+					  	<div class="col-sm-6"><img src="images/activity/a-2.jpg" alt=""></div>
+					  	
+					  	<div class="col-sm-6"><img src="images/activity/a-1.jpg" alt=""></div>
+					  </div>
+					</div>
+				</div>
+			</div>
+			<div class="product-related">
+				<div class="heading" style="margin-bottom: 20px;"><h2 class="h2">其他商家活动</h2></div>
+				<div class="products">
+					<div class="col-lg-4 col-md-4 col-xs-12">
+						<div class="product">
+							<div class="image"><a href="javascript:;"><img src="images/activity/5.jpg" /></a></div>
+							<div class="caption">
+								<div class="name"><h3><a href="javascript:;">妇女节购家电回馈</a></h3></div>
+								<div class="rating">推荐程度： <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-xs-12">
+						<div class="product">
+							<div class="image"><a href="javascript:;"><img src="images/activity/1.jpg" /></a></div>
+							<div class="caption">
+								<div class="name"><h3><a href="javascript:;">儿童节亲子活动</a></h3></div>
+								<div class="rating">推荐程度： <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-xs-12">
+						<div class="product">
+							<div class="image"><a href="javascript:;"><img src="images/activity/6.jpg" /></a></div>
+							<div class="caption">
+								<div class="name"><h3><a href="javascript:;">端午包粽子大赛</a></div>
+								<div class="rating">推荐程度： <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div id="sidebar" class="col-md-4">
+			<div class="widget wid-categories">
+				<div class="heading"><h4>活动实施方案</h4></div>
+				<div class="content">
+					<ul>
+						<li>1.凡在我超市二楼一次性购物满38元，即可凭小票到一楼服务台领取小国旗一面。(限500面，送完为止) </li>
+						<li>2.秋装上市，名品服饰展示会</li>
+						<li>3.陌生人之间交友到10人以上送套餐</li>
+					</ul>
+				</div>
+			</div>
+			<div class="widget wid-type">
+				<div class="heading"><h4>活动标签</h4></div>
+				<div class="content" style="font-size: 20px;">
+					<span class="label label-danger">国庆节</span>
+					<span class="label label-success">礼物</span>
+					<span class="label label-primary">历史题材</span>
+					<span class="label label-warning">正能量</span>
+				</div>
+			</div>
+			<div class="widget wid-discouts">
+				<div class="heading"><h4>参加人数</h4></div>
+				<div class="content">
+					活动限定128人,目前已有<span style="color:red">47</span>人报名参加
+				</div>
+			</div>
+			<div class="widget wid-product">
+				<div class="heading"><h4>精彩留言</h4></div>
+				<div class="">
+					<div class="product">
+						<a ><img src="images/user1.jpg" /></a>
+						<div class="wrapper">
+							<h5><a href="javascript:;">月儿好看0304</a></h5>
+							<p style="line-height: 22px;margin-top: 10px;">让我想起来以前参加过的活动，真的太棒了，看来能从中拓宽了视野，提高了个人素养，完善了个性品质。</p>
+						</div>
+					</div>
+					<div class="product">
+						<a ><img src="images/user2.jpg" /></a>
+						<div class="wrapper">
+							<h5><a href="javascript:;">展翅欲飞1998</a></h5>
+							<p style="line-height: 22px;margin-top: 10px;">这种活动我非常的期待，希望再早一点开始，哈哈哈!!!</p>
+						</div>
+					</div>
+					<div class="product">
+						<a ><img src="images/bg2.jpg" /></a>
+						<div class="wrapper">
+							<h5><a href="javascript:;">凤凰网友</a></h5>
+							<p style="line-height: 22px;margin-top: 10px;">相当靠谱，I love that!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+</div>
+<a class="to-top" style="background:url(images/toTop.png);width:34px;height:34px;border-radius:5px;"></a>
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">Copyright &copy; 2017 All Rights Reserved.</div>
+      <div class="col-sm-6">
+        <div class="follow-us"> <a class="fa fa-facebook social-icon" href="#"></a> <a class="fa fa-twitter social-icon" href="#"></a> <a class="fa fa-linkedin social-icon" href="#"></a> <a class="fa fa-google-plus social-icon" href="#"></a> </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/jquery.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.prettyPhoto.js"></script> 
+<script src="js/jquery.isotope.min.js"></script> 
+<script src="js/jquery.toTop.js"></script>
+<script src="js/jqBootstrapValidation.js"></script> 
+<script>
+	$(document).ready(function(){
+		$(".nav-tabs a").click(function(){
+			$(this).tab('show');
+		});
+		$('.nav-tabs a').on('shown.bs.tab', function(event){
+			var x = $(event.target).text();         // active tab
+			var y = $(event.relatedTarget).text();  // previous tab
+			$(".act span").text(x);
+			$(".prev span").text(y);
+		});
+	});
+
+</script>
+<script src="js/main.js"></script>
+
+</body>
+<script>
+	
+</script>
+</html>

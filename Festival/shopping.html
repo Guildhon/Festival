@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>易过节 | 商品购买</title>
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .fa-index{
+    font-size:1.3em;
+  }
+  .shop_box h3{
+    text-align: center;
+  }
+  .actual{
+    color: #f40;
+    font-weight: 700;color:
+  }
+  .reducedfrom{
+    color:#9c9c9c; 
+    text-decoration: line-through;
+  }
+  .btn-1{
+    font-size: 1.3em;
+    color:#000;
+  }
+  .btn-1:hover{
+    font-size: 1.3em;
+    color:#f39c12;
+  }
+  .b1{
+    border:1px solid #ccc;
+    text-align: center;
+    margin-top: 3px;
+  }
+  .b1 a{
+    color:#666 !important;
+    margin-left: 13px;
+  }
+  .b1 a.a-active{
+    color:red !important;
+  }
+  .pd{
+    margin-bottom: 10px;
+    margin-left: 0px;
+  }
+  @media (max-width: 416px) {
+    .m-b-xs{
+      display: none;
+    }
+    .sm-t{
+      margin-top: 10px;
+    }
+    .b1{
+      margin-left: -14px;
+    }
+  }
+  .smt{
+    margin-bottom: 14px;
+  }
+  .nav-list a,#accordion a{
+    color:#000;
+  }
+  .nav-list a:hover{
+    color:red;
+  }
+  #accordion a:hover{
+    color:red;
+  }
+  .nav-header{
+    background:#0088cc;
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+    padding: 4px;
+  }
+  .nav-list{
+    border:1px solid #ccc;
+  }
+  .type{
+    padding: 8px;
+    font-weight: bold;
+    font-size: 1.2em;
+
+  }
+  .pricing-tables{
+    padding-bottom: 0px;
+  }
+
+</style>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<header id="header">
+  <nav class="navbar navbar-inverse" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand" href="index.html"><i class="fa fa-sun-o"></i>易过节</a></div>
+      <div class="collapse navbar-collapse navbar-right">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">主页</a></li>
+          <li><a href="organizatActivity.html">组织活动</a></li>
+          <li class="active"><a href="shopping.html">商品购买</a></li>
+          <li><a href="businessesActivity.html">商家活动</a></li>
+          <li><a href="festivalNews.html">节日新闻</a></li>
+          <li><a href="festivalCircle.html">过节圈</a></li>
+          <li><a href="login.html">登录</a>|<a href="register.html">注册</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<div id="inner-page">
+  <div class="top-center">
+    <h2>商品购买</h2>
+    <p class="lead">您可以在这里购买过节所需的各种道具，
+      也可以在这里选购礼物送给他人。</p>
+  </div>
+  <div class="container">
+    <div class="clearfix pull-right">
+       <div class="col-md-4">
+        <div id="cart"><a class="btn btn-1" href="shoppingCart.html"><span class="glyphicon glyphicon-shopping-cart"></span>我的购物车<span class="badge">10</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="banner-bottom-info">
+        <h3>商品购物&&节日道具</h3>
+    </div>
+    <br>
+    <div class="row pd">
+       <div class="col-sm-3 b1">
+          <a href="javascript:;" class="a-active" id="">综合</a>
+          <a href="javascript:;" class="">销量<i class="fa fa-arrow-down"></i></a>
+          <a href="javascript:;" class="">信用<i class="fa fa-arrow-down"></i></a>
+          <a href="javascript:;" class="">价格<i class="fa fa-heart"></i></a>
+       </div>
+      
+        <div class="col-sm-6 m-b-xs">
+            <div class="form-inline row">
+                <div class="col-sm-6 col-sm-offset-1">
+                   <div class="pull-left">
+                     商品类型
+                  <i class="fa fa-navicon"></i>
+                  <select class="form-control" style="background: #fff;">
+                     <option value=""></option>
+                     <option value="">赠送的礼物</option>
+                     <option value="">裤子</option>
+                     <option value="">鞋子</option>
+                     <option value="">车辆</option>
+                     <option value="">衣服</option>
+                  </select>
+                   </div>
+                </div>
+                <div class="col-sm-5 ">
+                  <div class="pull-left">
+                     选择节日
+                <i class="fa fa-navicon"></i>
+                <select class="form-control" style="background: #fff;">
+                    <option value=""></option>
+                    <option value="1">端午节日</option>
+                    <option value="2">中秋节日</option> 
+                    <option value="3">元宵节日</option>
+                </select>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 sm-t pull-right">
+          <div class="input-group">
+              <input type="text" placeholder="搜索" class="form-control ng-pristine ng-untouched ng-valid"> <span class="input-group-btn">
+              <button type="button" class="btn btn-warning">搜索</button> </span>
+          </div>
+        </div>
+    </div>
+    <div class="row shop_box-top">
+      <div class="col-md-3 shop_box"><a href="product.html">
+        <img src="images/goods/goods2.jpg" class="img-responsive" alt=""/>
+        <div class="shop_desc clearfix">
+          <h3><a href="product.html">中秋节月饼 1件套</a></h3>
+          <p>月饼最初是用来祭奉月神的祭品，现在可以各种用途。 </p>
+          <span class="actual">￥72.00</span><br>
+          <ul class="buttons">
+            <li class="cart"><i class="fa fa-shopping-cart fa-index"></i> <a href="javascript:;" class="add-cart">添加到购物车</a></li>
+            <li class="shop_btn">销量：10210</li>
+            <div class="clear"> </div>
+            </ul>
+          </div>
+      </a></div>
+       <div class="col-md-3 shop_box"><a href="product.html">
+        <img src="images/goods/goods4.jpg" class="img-responsive" alt=""/>
+        <div class="shop_desc clearfix">
+          <h3><a href="product.html">复活节可爱彩蛋 2个</a></h3>
+          <p>蛋里面也会藏一些小礼物，带给别人各种各样的惊喜。 </p>
+          <span class="actual">￥12.00</span><br>
+          <ul class="buttons">
+            <li class="cart"><i class="fa fa-shopping-cart fa-index"></i> <a href="javascript:;" class="add-cart">添加到购物车</a></li>
+            <li class="shop_btn">销量：99000</li>
+            <div class="clear"> </div>
+            </ul>
+          </div>
+      </a></div>
+      <div class="col-md-3 shop_box"><a href="product.html">
+        <img src="images/goods/goods3.jpg" class="img-responsive" alt=""/>
+        <div class="shop_desc clearfix">
+          <h3><a href="product.html">圣诞礼物盒子</a></h3>
+          <p>圣诞老人为儿童赠送礼品习俗，给他们带来满袜子的礼物 </p>
+          <span class="actual">￥19.00</span><br>
+          <ul class="buttons">
+            <li class="cart"><i class="fa fa-shopping-cart fa-index"></i> <a href="javascript:;" class="add-cart">添加到购物车</a></li>
+            <li class="shop_btn">销量：10000</li>
+            <div class="clear"> </div>
+            </ul>
+          </div>
+      </a></div>
+      <div class="col-md-3 shop_box"><a href="product.html">
+        <img src="images/goods/goods6.jpg" class="img-responsive" alt=""/>
+        <div class="shop_desc clearfix">
+          <h3><a href="product.html">新年鞭炮</a></h3>
+          <p>正月初一开始为新年。家家贴红对联、燃放爆竹;户户烛火通明。 </p>
+          <span class="actual">￥12.00</span><br>
+          <ul class="buttons">
+            <li class="cart"><i class="fa fa-shopping-cart fa-index"></i> <a href="javascript:;" class="add-cart">添加到购物车</a></li>
+            <li class="shop_btn">销量：10000</li>
+            <div class="clear"> </div>
+            </ul>
+          </div>
+      </a></div>
+    </div>
+     <div class="row">
+      <div class="col-md-3 shop_box"><a href="product.html">
+        <img src="images/goods/goods5.jpg" class="img-responsive" alt=""/>
+        <div class="shop_desc clearfix">
+          <h3><a href="product.html">万圣节南瓜灯</a></h3>
+          <p>人们为了在万圣节前夜吓走游魂，这就是南瓜灯的由来。</p>
+          <span class="actual">￥12.00</span><br>
+          <ul class="buttons">
+            <li class="cart"><i class="fa fa-shopping-cart fa-index"></i> <a href="javascript:;" class="add-cart">添加到购物车</a></li>
+            <li class="shop_btn">销量：10000</li>
+            <div class="clear"> </div>
+            </ul>
+          </div>
+      </a></div>
+       <div class="col-md-3 shop_box"><a href="product.html">
+        <img src="images/goods/goods1.jpg" class="img-responsive" alt=""/>
+        <div class="shop_desc clearfix">
+          <h3><a href="product.html">情人节礼物戒指</a></h3>
+          <p>支持定制 纯手工镶金 简约不简单,是送礼的必备 </p>
+          <span class="actual">￥12.00</span><br>
+          <ul class="buttons">
+            <li class="cart"><i class="fa fa-shopping-cart fa-index"></i> <a href="javascript:;" class="add-cart">添加到购物车</a></li>
+            <li class="shop_btn">销量：10000</li>
+            <div class="clear"> </div>
+            </ul>
+          </div>
+      </a></div>
+      <div class="col-md-3 shop_box"><a href="product.html">
+        <img src="images/goods/goods8.jpg" class="img-responsive" alt=""/>
+        <div class="shop_desc clearfix">
+          <h3><a href="product.html">平安夜蜡烛</a></h3>
+          <p>4小时8小时酥油灯供灯，玻璃杯香氛室内助眠。</p>
+          <span class="actual">￥12.00</span><br>
+          <ul class="buttons">
+            <li class="cart"><i class="fa fa-shopping-cart fa-index"></i> <a href="javascript:;" class="add-cart">添加到购物车</a></li>
+            <li class="shop_btn">销量：10000</li>
+            <div class="clear"> </div>
+            </ul>
+          </div>
+      </a></div>
+      <div class="col-md-3 shop_box"><a href="product.html">
+        <img src="images/goods/goods7.jpg" class="img-responsive" alt=""/>
+        <div class="shop_desc clearfix">
+          <h3><a href="product.html">喜庆婚礼灯笼</a></h3>
+          <p>魂笔必备，一个个小红灯笼像红透的桃子,多好看呀!</p>
+          <span class="actual">￥12.00</span><br>
+          <ul class="buttons">
+            <li class="cart"><i class="fa fa-shopping-cart fa-index"></i> <a href="javascript:;" class="add-cart">添加到购物车</a></li>
+            <li class="shop_btn">销量：10000</li>
+            <div class="clear"> </div>
+            </ul>
+          </div>
+      </a></div>
+    </div>
+    <div class="col-sm-12">
+      <div class="col-sm-offset-4 col-sm-6 ">
+        <ul class="pagination">
+          <li class="disabled"><a href="javascript:void(0);"> <span>&lt;&lt;</span></a></li><li class="active"><a href="javascript:void(0);">1</a></li>
+          <li><a href="javascript:void(0);">2</a></li>
+          <li><a href="javascript:void(0);"><span>&gt;&gt;</span></a></li>
+          <li><span>第1页/共12页</span></li></ul></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="banner-bottom-info">
+        <h3>热门礼品推荐</h3>
+    </div>
+    <div class="row pricing-tables">
+     <div class="col-sm-3">
+       <ul class="nav nav-list smt">
+            <li class="type">送礼对象推荐</li>
+            <li class="nav-header">朋友送礼</li>
+            <li class="active"><a href="javascript:;"><i class="fa fa-home"></i> 家具用品</a></li>
+            <li><a href="javascript:;"><i class="fa fa-book"></i> 书籍用品</a></li>
+            <li><a href="javascript:;"><i class="fa fa-pencil"></i> 文具用品</a></li>
+            <li class="nav-header">亲戚送礼</li>
+            <li class="active"><a href="javascript:;"><i class="fa fa-tree"></i> 环保用品</a></li>
+            <li><a href="javascript:;"><i class="fa fa-music"></i> 娱乐用品</a></li>
+            <li><a href="javascript:;"><i class="fa fa-pencil"></i> 文具用品</a></li>
+        </ul>
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" 
+                   href="#collapseOne">
+                  悠闲类 <i class="fa fa-chevron-down"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+              <div class="panel-body">
+                <ul>
+                  <li><a href="javascript:;"><i class="fa fa-pencil"></i> 文具用品</a></li>
+                  <li class="active"><a href="javascript:;"><i class="fa fa-bullhorn"></i> 玩耍用品</a></li>
+                  <li><a href="javascript:;"><i class="fa fa-glass"></i> 放松用品</a></li>
+                  <li class="active"><a href="javascript:;"><i class="fa fa-lock"></i> 数码用品</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" 
+                   href="#collapseTwo">
+                  实用类 <i class="fa fa-chevron-down"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+              <div class="panel-body">
+                <ul>
+                  <li class="active"><a href="javascript:;"><i class="fa fa-bullhorn"></i> 玩耍用品</a></li>
+                  <li class="active"><a href="javascript:;"><i class="fa fa-lock"></i> 数码用品</a></li>
+                  <li><a href="javascript:;"><i class="fa fa-book"></i> 书籍用品</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" 
+                   href="#collapseThree">
+                  养生类 <i class="fa fa-chevron-down"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+              <div class="panel-body">
+                <ul>
+                  <li class="active"><a href="javascript:;"><i class="fa fa-leaf"></i> 食品用品</a></li>
+                  <li><a href="javascript:;"><i class="fa fa-lock"></i> 保险用品</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+     </div>
+     <div class="col-sm-9">
+        <div class="col-md-4 smt">
+          <div class="pricing-table">
+          <div>
+          <img src="images/goods/gif1.jpg" class="img-responsive" alt=""/>  
+          </div>
+            <div class="plan-name">
+              <h3>中式茶壶 ￥20</h3>
+            </div>
+            <div class="plan-list">
+              <ul>
+                <li>是一种泡茶和斟茶用的带嘴器皿,主要用来泡茶，是茶具的一种</li>
+              </ul>
+            </div>
+            <div class="plan-signup"> <a href="product.html" class="btn-system">查看详情</a> </div>
+          </div>
+        </div>
+       <div class="col-md-4 smt">
+          <div class="pricing-table">
+          <div>
+          <img src="images/goods/gif2.jpg" class="img-responsive" alt=""/>  
+          </div>
+            <div class="plan-name">
+              <h3>趴趴熊猫公仔抱枕 ￥123</h3>
+            </div>
+            <div class="plan-list">
+              <ul>
+                <li>节日生日情人节礼物送女生，颜色分类: 萌系三角眼 桃心可爱 桃心泪</li>
+              </ul>
+            </div>
+            <div class="plan-signup"> <a href="product.html" class="btn-system">查看详情</a> </div>
+          </div>
+        </div>
+       <div class="col-md-4 smt">
+          <div class="pricing-table">
+          <div>
+          <img src="images/goods/gif3.jpg" class="img-responsive" alt=""/>  
+          </div>
+            <div class="plan-name">
+              <h3>iphone7巧克力 ￥10</h3>
+            </div>
+            <div class="plan-list">
+              <ul>
+                <li>以为是苹果手机的时候打开却是巧克力情.人节，光棍节，首选</li>
+              </ul>
+            </div>
+            <div class="plan-signup"> <a href="product.html" class="btn-system">查看详情</a> </div>
+          </div>
+        </div>
+       <div class="col-md-4 smt">
+          <div class="pricing-table">
+          <div>
+          <img src="images/goods/gif4.jpg" class="img-responsive" alt=""/>  
+          </div>
+            <div class="plan-name">
+              <h3>商务礼品 ￥21</h3>
+            </div>
+            <div class="plan-list">
+              <ul>
+                <li>本套餐为签字笔 U盘 名片夹鼠标 电源组合套装，具体发货按拍下属性发出</li>
+              </ul>
+            </div>
+            <div class="plan-signup"> <a href="product.html" class="btn-system">查看详情</a> </div>
+          </div>
+        </div>
+       <div class="col-md-4 smt">
+          <div class="pricing-table">
+          <div>
+          <img src="images/goods/gif5.jpg" class="img-responsive" alt=""/>  
+          </div>
+            <div class="plan-name">
+              <h3>水果便签 ￥9</h3>
+            </div>
+            <div class="plan-list">
+              <ul>
+                <li>创意小礼品小学生实用奖品毕业小礼物,也可送员工客户</li>
+              </ul>
+            </div>
+            <div class="plan-signup"> <a href="product.html" class="btn-system">查看详情</a> </div>
+          </div>
+        </div>
+       <div class="col-md-4 smt">
+          <div class="pricing-table">
+          <div>
+          <img src="images/goods/gif6.jpg" class="img-responsive" alt=""/>  
+          </div>
+            <div class="plan-name">
+              <h3>木质存钱罐 ￥14</h3>
+            </div>
+            <div class="plan-list">
+              <ul>
+                <li>超大号房子纸币储蓄罐 创意定制DIY摆件 实用节日礼物</li>
+              </ul>
+            </div>
+            <div class="plan-signup"> <a href="product.html" class="btn-system">查看详情</a> </div>
+          </div>
+        </div>
+         <div class="col-sm-12">
+      <div class="col-sm-offset-4 col-sm-6 ">
+        <ul class="pagination">
+          <li class="disabled"><a href="javascript:void(0);"> <span>&lt;&lt;</span></a></li><li class="active"><a href="javascript:void(0);">1</a></li>
+          <li><a href="javascript:void(0);">2</a></li>
+          <li><a href="javascript:void(0);"><span>&gt;&gt;</span></a></li>
+          <li><span>第1页/共12页</span></li></ul></div>
+    </div>
+     </div>
+    </div>
+  </div>
+</div>
+
+<section id="get-started">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>有问题? 需要帮助</h2>
+        <p>您可以发送信息给我们，我们一定在第一时间回复您！^_^<br>
+          我们是您最好的聆听者。</p>
+        <a href="contact.html" class="btn btn-info">点击寻求帮助</a> </div>
+    </div>
+  </div>
+</section>
+
+<a class="to-top" style="background:url(images/toTop.png);width:34px;height:34px;border-radius:5px;"></a>
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">Copyright &copy; 2017 All Rights Reserved.</div>
+      <div class="col-sm-6">
+        <div class="follow-us"> <a class="fa fa-facebook social-icon" href="#"></a> <a class="fa fa-twitter social-icon" href="#"></a> <a class="fa fa-linkedin social-icon" href="#"></a> <a class="fa fa-google-plus social-icon" href="#"></a> </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<link rel="stylesheet" href="css/sweet-alert.css">
+<script src="js/jquery.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.toTop.js"></script>
+<script src="js/sweet-alert.min.js"></script>
+<script>
+  $(function (){
+    $(".add-cart").on("click",function (){
+      swal({
+        title: "你确认添加到购物车吗?",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        closeOnConfirm: false
+      },
+      function(){
+        swal("添加成功!", "", "success");
+        $(".badge").text(parseInt($(".badge").text())+1);
+      });
+    });
+    $(function() {
+    $('.to-top').toTop();
+
+  });
+  });
+  $(".b1 a").on("click",function (){
+    $(this).addClass('a-active').siblings('a').removeClass('a-active');
+  });
+</script>
+</body>
+</html>

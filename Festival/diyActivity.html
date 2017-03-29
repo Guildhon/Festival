@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>易过节 | 模板活动</title>
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/prettyPhoto.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+<style>
+  .navbar-inverse {
+      box-shadow: none;
+  }
+  #inner-page{
+    margin-top: 60px;
+    padding-bottom: 20px;
+  }
+  .popular-post-grid{
+  padding:1em;
+}
+.post-img {
+  float:left;
+  width:25%;
+  margin-right:3%;
+}
+.post-img img {
+  width:100%;
+}
+.post-text {
+  float:left;
+  width:72%;
+}
+.post-text p {
+    color: #B5B3B3;
+    font-size: 0.875em;
+    margin: 0.5em 0;
+  text-transform: uppercase;
+}
+a.pp-title {
+    font-size: 1.05em;
+    color: #000;
+}
+a.pp-title:hover {
+    color: #84754e;
+}
+@media only screen and (max-width: 480px) {
+    #addPlace,#addTime{
+      margin-top: 10px;
+    }
+  }
+</style>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<header id="header">
+  <nav class="navbar navbar-inverse" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand" href="index.html"><i class="fa fa-sun-o"></i>易过节</a></div>
+      <div class="collapse navbar-collapse navbar-right">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">主页</a></li>
+          <li><a href="organizatActivity.html">组织活动</a></li>
+          <li><a href="shopping.html">商品购买</a></li>
+          <li><a href="businessesActivity.html">商家活动</a></li>
+          <li><a href="festivalNews.html">节日新闻</a></li>
+          <li><a href="festivalCircle.html">过节圈</a></li>
+          <li><a href="login.html">登录</a>|<a href="register.html">注册</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<div id="inner-page">
+  <div class="container">
+    <div id="page-content" class="archive-page container">
+      <div class="">
+        <div class="row">
+          <div class="col-md-8" style="border:1px solid #ccc;border-radius: 4px;">
+            <div class="banner-bottom-info">
+              <h3 class="h3"><i class="fa fa-tag"></i>创建活动</h3>
+            </div>
+            <div class="form-activity">
+              <form class="form-horizontal form-all" role="form" id="fileinfo"  enctype="multipart/form-data">
+               <div class="form-group">
+                  <label for="firstname" class="col-sm-2 control-label col-sm-offset-1">输入活动的名称</label>
+                  <div class="col-sm-7">
+                  <input type="text" name="timeline_title" placeholder="请输入名称" class="form-control">
+                  </div>
+                
+                </div>
+                <div class="form-group">
+                  <label for="firstname" class="col-sm-2 control-label col-sm-offset-1">输入活动的地点</label>
+                  <div class="col-sm-7">
+                    <input type="text" name="timeline_title" placeholder="请输入地点" class="form-control">
+                  </div>
+                  <div class="col-sm-2"><button type="button" class="btn btn-warning" id="addPlace"><i class="fa fa-plus"></i> 添加地点</button></div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label col-sm-offset-1">选择活动的时间</label>
+                  <div class="col-sm-7">
+                    <div class="input-append date" id="datetimepicker" data-date-format="dd-mm-yyyy">
+                    <input name="timeline_ctime" class="span2 form-control" size="16" type="text" placeholder="请输入时间">
+                    <span class="add-on"><i class="icon-remove"></i></span>
+                    <span class="add-on"><i class="icon-th"></i></span>
+                    </div>
+                  </div>
+                </div>
+                 <div class="form-group">
+                  <label class="col-sm-2 control-label col-sm-offset-1">选择截至的时间</label>
+                  <div class="col-sm-7">
+                    <div class="input-append date" id="datetimepicker" data-date-format="dd-mm-yyyy">
+                    <input name="timeline_ctime" class="span2 form-control" size="16" type="text" placeholder="请输入时间">
+                    <span class="add-on"><i class="icon-remove"></i></span>
+                    <span class="add-on"><i class="icon-th"></i></span>
+                    </div>
+                  </div>
+                  <div class="col-sm-2"><button class="btn btn-info" type="button" id="addTime"><i class="fa fa-plus"></i> 添加时间</button></div>
+                </div>
+                 <div class="form-group">
+                  <label class="col-sm-2 control-label col-sm-offset-1">活动内容</label>
+                  <div class="col-sm-7">
+                   <textarea name="" rows="8" class="form-control"></textarea>
+                  </div>
+                </div>
+                 <div class="form-group">
+                  <label class="col-sm-2 control-label col-sm-offset-1">活动描述</label>
+                  <div class="col-sm-7">
+                   <textarea name="" rows="8" class="form-control"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 text-right col-sm-offset-1">活动类型</label>
+                  <div class="col-sm-7">
+                    <label>
+                      <input type="checkbox" name="optionsRadios" id="" value="1"> 吃饭
+                    </label>  
+                    <label>
+                      <input type="checkbox" name="optionsRadios" id="" value="1"> 聚餐
+                    </label>  
+                    <label>
+                      <input type="checkbox" name="optionsRadios" id="" value="1"> 旅游
+                    </label>  
+                    <label>
+                      <input type="checkbox" name="optionsRadios" id="" value="1"> 唱K
+                    </label>
+                    <label>
+                      <input type="checkbox" name="optionsRadios" id="" value="1"> 其他
+                    </label>
+                  </div>
+                </div>
+                 <div class="form-group">
+                  <label class="col-sm-2 text-right col-sm-offset-1">类型补充</label>
+                  <div class="col-sm-7">
+                   <textarea name="" id="" rows="8" class="form-control"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 text-right col-sm-offset-1">选择上传附件</label>
+                    <div class="col-sm-7">
+                       <label class="sr-only" for="inputfile">文件输入</label>
+                        <input type="file" id="inputfile">
+                    </div>
+                </div>
+                <div class="form-group">
+                  <label for="firstname" class="col-sm-2 control-label col-sm-offset-1">预计花费￥费用</label>
+                  <div class="col-sm-7">
+                  <input type="text" name="timeline_title" placeholder="请输入费用" class="form-control">
+                  </div>
+                
+                </div>
+                 <div class="form-group">
+                  <label class="col-sm-2 control-label col-sm-offset-1">选择参加人数</label>
+                  <div class="col-sm-7">
+                      <select name="" id="" class="form-control">
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5位以上</option>
+                      </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-1">
+                    <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target=".fade">邀请朋友</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-1">
+                    <button type="button" class="btn btn-success pull-right" id="createActivity">创建活动</button>
+                    </div>
+                </div>
+              </form>
+            </div>
+  
+          </div>
+          <div id="sidebar" class="col-md-4">
+            <!---- Start Widget ---->
+            <div class="sap_tabs" style="margin-top:10px;"> 
+              <h3 class="h3">今天时间</h3>
+              <div class="">
+                  <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" style="margin:auto;"></div>
+                  <input type="hidden" id="dtp_input2" value="" />
+              </div>
+          </div>  
+            <div class="tags">
+              <h3 class="h3">我的好友</h3>
+              <div class="popular-post-grid">
+                  <div class="post-img">
+                    <a href="javascript:;"><img src="images/user1.jpg" alt=""></a>
+                  </div>
+                  <div class="post-text">
+                    <a class="h4" href="" style="font-weight: 700; font-size: 18px;">无戒</a><br>
+                    <a class="pp-title"> 我是一个好作家情怀是一种远大的抱负，这种抱负未必能为人所理解，即便不被理解，有情怀的人也不在意........</a>
+                  </div>
+                  <div class="clearfix"></div>
+              </div>
+              <div class="popular-post-grid">
+                  <div class="post-img">
+                    <a href="javascript:;"><img src="images/user2.jpg" alt=""></a>
+                  </div>
+                  <div class="post-text">
+                    <a class="h4" href="" style="font-weight: 700; font-size: 18px;">小甲鱼</a><br>
+                    <a class="pp-title"> 小甲鱼在这里哈哈哈</a>
+                  </div>
+                  <div class="clearfix"></div>
+              </div>
+              <div class="popular-post-grid clearfix">
+                <button class="btn btn-default col-sm-12" >点击展开更多</button>
+              </div>
+           </div>
+              <div>
+                <h3 class="h3">近期热门活动排行</h3>
+                <ul class="list-group">
+                  <li class="list-group-item"><i class="fa fa-glass" style="color: rgb(243, 156, 18);"></i>
+                  1.四川酒吧畅饮一天</li>
+                  <li class="list-group-item"><i class="fa fa-plane" style="color: rgb(243, 156, 18);"></i> 2.广州市:一日读懂两千年</li>
+                  <li class="list-group-item"><i class="fa fa-music" style="color: rgb(243, 156, 18);"></i> 3.欢乐滴大冒险活动</li>
+                  <li class="list-group-item"><i class="fa fa-globe" style="color: rgb(243, 156, 18);"></i> 4.年度最流行的旅游胜地</li>
+                  <li class="list-group-item"><i class="fa fa-coffee" style="color: rgb(243, 156, 18);"></i> 5.休息胜地星巴克之套餐</li>
+                  <button class="btn btn-default" style="width:100%">查看更多</button>
+                </ul>
+                
+              </div>   
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+</div>
+<a class="to-top" style="background:url(images/toTop.png);width:34px;height:34px;border-radius:5px;"></a>
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">Copyright &copy; 2017 All Rights Reserved.</div>
+      <div class="col-sm-6">
+        <div class="follow-us"> <a class="fa fa-facebook social-icon" href="#"></a> <a class="fa fa-twitter social-icon" href="#"></a> <a class="fa fa-linkedin social-icon" href="#"></a> <a class="fa fa-google-plus social-icon" href="#"></a> </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="modal fade" id="invest_content" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close close-1" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="changeNick">请输入回复内容</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form" class="form-horizontal">
+            <div class="form-group">
+              <label class="col-sm-2 control-label">邀请朋友</label>
+            <div class="col-sm-8">
+              <select name="" id="" class="form-control">
+                <option value="">小黄</option>
+                <option value="">米粒</option>
+                <option value="">台啊</option>
+                <option value="">收到</option>
+              </select>
+            </div>
+            </div>
+             <div class="form-group">
+              <label class="col-sm-2 control-label">附带信息</label>
+              <div class="col-sm-8">
+                <textarea name="" class="form-control" id="" rows="10"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">退出</button>
+          <button type="button" class="btn btn-primary" id="invest">发送邀请</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script src="js/jquery.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.toTop.js"></script>
+<link rel="stylesheet" href="bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
+<script src="bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script src="bootstrap-datetimepicker/js/bootstrap-datetimepicker.zh-CN.js"></script>
+<link rel="stylesheet" href="css/sweet-alert.css">
+<script src="js/sweet-alert.min.js"></script>
+ <script src="js/easytab.js" type="text/javascript"></script>
+ <script type="text/javascript">
+  $(document).ready(function () {
+  $('.date').datetimepicker({
+        format:"yyyy-mm-dd hh:ii:ss",
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        minView: "hour",
+        showMeridian: 1,
+        language:'zh-CN',
+
+  });
+  $('#datetimepicker').datetimepicker();
+  });
+  $("#invest").on("click",function (){
+      swal({
+        title: "发送邀请成功，等候通知！",
+        type: "success",
+      },
+      function(){
+       $(".close-1").trigger("click");
+   });
+  });
+   $("#createActivity").on("click",function (){
+      swal({
+        title: "创建活动成功！",
+        type: "success",
+      },
+      function(){
+       $(".close-1").trigger("click");
+   });
+
+  });
+   $("#addPlace").on("click",function (){
+      var str="<div class='form-group'>"+$(this).parents(".form-group").html()+"</div>";
+     $(this).parents(".form-group").after(str);
+   });
+   $("#addTime").on("click",function (){
+      var str="<div class='form-group'>"+$(this).parents(".form-group").html()+"</div>";
+     $(this).parents(".form-group").after(str);
+   });
+</script>
+</body>
+</html>
+<style>
+  
+</style>
